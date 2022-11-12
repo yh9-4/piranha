@@ -3,7 +3,7 @@
     "dataset": "TI",
     "batch_size": 128,
     "input_size": 12288,
-    "num_classes": 10,
+    "num_classes": 200,
     "model": [
         {
             "layer": "cnn",
@@ -36,7 +36,7 @@
         },
         {
             "layer": "averagepool",
-            "input_hw": [8, 8],
+            "input_hw": [6, 6],
             "in_channels": 256,
             "pool_hw": [2, 2],
             "stride": 1
