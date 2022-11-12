@@ -76,24 +76,31 @@
             "input_hw": [5, 5],
             "in_channels": 384,
             "out_channels": 256,
-            "filter_hw": [3, 3],
+            "filter_hw": [4, 4],
             "stride": 1,
             "padding": 1
         },
         {
             "layer": "relu",
-            "input_dim": 6400
+            "input_dim": 4096
         },
         {
             "layer": "averagepool",
-            "input_hw": [5, 5],
+            "input_hw": [4, 4],
+            "in_channels": 256,
+            "pool_hw": [2, 2],
+            "stride": 2
+        },
+         {
+            "layer": "averagepool",
+            "input_hw": [2, 2],
             "in_channels": 256,
             "pool_hw": [2, 2],
             "stride": 2
         },
         {
             "layer": "fc",
-            "input_dim": 1024,
+            "input_dim": 256,
             "output_dim": 1024 
         },
         {
@@ -113,10 +120,6 @@
             "layer": "fc",
             "input_dim": 1024,
             "output_dim": 200 
-        },
-        {
-            "layer": "relu",
-            "input_dim": 200
         }
     ] 
 }
